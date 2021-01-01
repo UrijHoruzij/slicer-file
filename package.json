@@ -1,0 +1,26 @@
+{
+  "name": "slicer",
+  "version": "1.0.0",
+  "description": "Slicer - a library that allows you to load files in chunks.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run rm && cross-env NODE_ENV=production babel index.js --out-dir dist",
+    "rm": "rimraf ./dist"
+  },
+  "author": "Urij Horuzij",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
