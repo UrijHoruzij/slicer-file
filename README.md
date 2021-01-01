@@ -1,6 +1,6 @@
-### Slicer
+### Slicer-File
 
-![GitHub](https://img.shields.io/github/license/UrijHoruzij/slicer) ![GitHub package.json version](https://img.shields.io/github/package-json/v/UrijHoruzij/slicer)
+![GitHub](https://img.shields.io/github/license/UrijHoruzij/slicer-file) ![GitHub package.json version](https://img.shields.io/github/package-json/v/UrijHoruzij/slicer-file)
 
 ---
 

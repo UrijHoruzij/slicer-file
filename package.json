@@ -1,12 +1,26 @@
 {
-  "name": "slicer",
-  "version": "1.0.0",
-  "description": "Slicer - a library that allows you to load files in chunks.",
+  "name": "slicer-file",
+  "version": "1.0.1",
+  "description": "Slicer-File - a library that allows you to upload files in chunks.",
   "main": "index.js",
   "scripts": {
     "build": "npm run rm && cross-env NODE_ENV=production babel index.js --out-dir dist",
     "rm": "rimraf ./dist"
   },
+  "keywords": [
+    "file",
+    "slice",
+    "upload",
+    "thin",
+    "FormData",
+    "chunk",
+    "form",
+    "post",
+    "multipart",
+    "form-data",
+    "formdata",
+    "large"
+  ],
   "author": "Urij Horuzij",
   "license": "GPL-3.0",
   "devDependencies": {
@@ -22,5 +36,11 @@
   "files": [
     "dist",
     "README.md"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/UrijHoruzij/slicer-file.git",
+    "directory": "UrijHoruzij/slicer-file"
+  },
+  "homepage": "https://github.com/UrijHoruzij/slicer-file"
 }
