@@ -11,11 +11,17 @@ This library allows you to upload files in chunks.
 ```js
 import { slicer, support } from "slicer";
 
+const files = [];
 const data = {
   user: "1",
   date: new Date(),
 };
 if (support()) {
-  slicer("url", 1024 * 1024, data);
+  slicer("url", files, 1024 * 1024, data);
 }
 ```
+
+#### URL:
+
+url + /status — checking how many bytes have already been uploaded to the server.
+url + /upload — loading a file with chunks.
