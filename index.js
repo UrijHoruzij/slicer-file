@@ -1,8 +1,9 @@
-const slicer = async (url, files, sizechunk=1024*1024, data={})=>{
+const slicer = async (url, files, sizechunk=1024*1024, data={}, callback)=>{
     if(files){
         let formData = new FormData();
         let reader = new FileReader();
         let blob;
+        let progress;
         for (let key in data) {
             formData.set(key, data[key]);
         }
@@ -23,6 +24,19 @@ const slicer = async (url, files, sizechunk=1024*1024, data={})=>{
                     const result = await request(url + '/upload',formData);
                     if(result.status === 200){
                         start += sizechunk;
+                        if((start*100)/file.size > 100){
+                            progress = 100
+                        }else{
+                            progress = (start*100)/file.size
+                        }
+                        if(callback){
+                            callback({
+                                name: file.name,
+                                progress: progress,
+                                id: result.json().id,
+                                data: result.json().data
+                            })
+                        }
                         if(start < file.size){
                             blob = file.slice(start,start + sizechunk);
                             reader.readAsDataURL(blob);

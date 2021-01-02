@@ -17,11 +17,18 @@ const data = {
   date: new Date(),
 };
 if (support()) {
-  slicer("url", files, 1024 * 1024, data);
+  slicer("url", files, 1024 * 1024, data, callback);
 }
 ```
 
 #### URL:
 
-url + /status — checking how many bytes have already been uploaded to the server.
-url + /upload — loading a file with chunks.
+- url + /status — checking how many bytes have already been uploaded to the server.
+- url + /upload — loading a file with chunks.
+
+### Callback:
+
+- name
+- progress
+- id
+- data
