@@ -8,7 +8,7 @@ const slicer = async (url, files, sizechunk=1024*1024, data={}, callback)=>{
             formData.set(key, data[key]);
         }
         for(let i = 0; i < files.length; i++) { 
-            let file = files[i];        
+            let file = files[i];       
             formData.set('name',file.name);
             formData.set('type',file.name.split('.').pop());
             formData.set('size',file.size);
