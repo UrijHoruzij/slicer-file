@@ -11,13 +11,17 @@ This library allows you to upload files in chunks.
 ```js
 import { slicer, support } from "slicer";
 
-const files = [];
+const headers = {};
+const file = {};
 const data = {
   user: "1",
   date: new Date(),
 };
+let stopFlag = {
+  stop: true,
+};
 if (support()) {
-  slicer("url", files, 1024 * 1024, data, callback);
+  slicer("url", headers, file, 1024 * 1024, data, callback, stopFlag);
 }
 ```
 

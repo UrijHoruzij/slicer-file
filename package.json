@@ -1,6 +1,6 @@
 {
   "name": "slicer-file",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Slicer-File - a library that allows you to upload files in chunks.",
   "scripts": {
     "build": "npm run rm && cross-env NODE_ENV=production babel index.js --out-dir dist",
