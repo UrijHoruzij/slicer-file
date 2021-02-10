@@ -1,4 +1,5 @@
-const slicer = async (url, headers={}, file, sizechunk=1024*1024, data={}, callback=f=>f, stopObj={})=>{
+const slicer = async(url, headers={}, file, sizechunk=1024*1024, data={}, callback=f=>f, stopObj={}) =>
+    new Promise(async (resolve,reject) =>{    
     if(file){
         let formData = new FormData();
         let reader = new FileReader();
@@ -37,6 +38,8 @@ const slicer = async (url, headers={}, file, sizechunk=1024*1024, data={}, callb
                     if(start < file.size){
                         blob = file.slice(start,start + sizechunk);
                         reader.readAsDataURL(blob);
+                    }else{
+                        resolve('success');
                     }
                 }else{
                     let dataResult = await result.json()
@@ -46,7 +49,7 @@ const slicer = async (url, headers={}, file, sizechunk=1024*1024, data={}, callb
                         progress: progress,
                         data: dataResult
                     })
-                    return;
+                    reject('error');
                 }
             }; 
             blob = file.slice(start,sizechunk);
@@ -56,10 +59,10 @@ const slicer = async (url, headers={}, file, sizechunk=1024*1024, data={}, callb
                 name: file.name,
                 progress: 100,
             })
-            return;
+            resolve('success');
         }
     }
-}
+});
 
 const request = async (url,headers, data)=>{
     const response = await fetch(url, {
