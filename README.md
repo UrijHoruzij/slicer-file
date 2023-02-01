@@ -1,12 +1,19 @@
-### Slicer-File
-
-![GitHub](https://img.shields.io/github/license/UrijHoruzij/slicer-file) ![GitHub package.json version](https://img.shields.io/github/package-json/v/UrijHoruzij/slicer-file)
-
----
+<p align="center">
+  <img src="./assets/logo.png" alt="Slicer-File logo" width="128" height="128">
+  <h1 align="center">Slicer-File</h1>
+</p>
+<p align="center">
+    <a aria-label="License" href="https://github.com/UrijHoruzij/slicer-file/blob/master/LICENSE">
+      <img alt="GitHub" src="https://img.shields.io/github/license/UrijHoruzij/slicer-file?color=62c089">
+    </a>
+    <a aria-label="Version" href="https://github.com/UrijHoruzij/slicer-file/blob/master/package.json">
+      <img alt="Version" src="https://img.shields.io/github/package-json/v/UrijHoruzij/slicer-file?color=62c089">
+    </a>
+  </p>
 
 This library allows you to upload files in chunks.
 
----
+## Used
 
 ```js
 import { slicer, support } from "slicer";
@@ -43,9 +50,13 @@ if (support()) {
 - callback — the function that is called when the chunk is successfully sent
 - stopFlag — the object that needs to be changed in order to stop sending the file
 
-### Callback:
+#### Callback:
 
 - name
 - progress
 - id
 - data
+
+## License
+
+Slicer-File is released under the [GNU 3 License](https://github.com/UrijHoruzij/slicer-file/blob/master/LICENSE).
