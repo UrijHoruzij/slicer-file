@@ -4,10 +4,10 @@
 </p>
 <p align="center">
     <a aria-label="License" href="https://github.com/UrijHoruzij/slicer-file/blob/master/LICENSE">
-      <img alt="GitHub" src="https://img.shields.io/github/license/UrijHoruzij/slicer-file?color=62c089">
+      <img alt="GitHub" src="https://img.shields.io/github/license/UrijHoruzij/slicer-file?color=523857">
     </a>
     <a aria-label="Version" href="https://github.com/UrijHoruzij/slicer-file/blob/master/package.json">
-      <img alt="Version" src="https://img.shields.io/github/package-json/v/UrijHoruzij/slicer-file?color=62c089">
+      <img alt="Version" src="https://img.shields.io/github/package-json/v/UrijHoruzij/slicer-file?color=523857">
     </a>
   </p>
 
